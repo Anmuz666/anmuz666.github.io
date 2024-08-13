@@ -6,6 +6,16 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'starting',
+    component: () => import('@/views/starting/index.vue')
+  },
+  {
+    path: '/starting',
+    name: 'starting',
+    component: () => import('@/views/starting/index.vue')
+  },
+  {
+    path: '/home',
     name: 'home',
     component: () => import('@/views/home/index.vue')
   },

@@ -1,7 +1,9 @@
 <template>
   <div class="body">
     <div class="navbar" id="nav">
-      <div class="logo">1</div>
+      <div class="logo">
+        <img style="height: 100%;width:100%;object-fit: cover;" src="/imgs/狗头02.jpg" alt="找不到图片"/>
+      </div>
       <div class="menu-icon" @click="toggleMenu" id="menuIcon">
         <span></span>
         <span></span>
@@ -67,9 +69,11 @@ export default {
 }
 
 .logo {
-  font-size: 24px;
+  height: 50px;
+  width:50px;
+  /* font-size: 24px;
   font-weight: bold;
-  color: #232c53;
+  color: #232c53; */
 }
 
 .navbar ul {

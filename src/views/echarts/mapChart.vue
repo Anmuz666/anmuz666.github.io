@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <div>
-      <el-button size="mini" type="primary" @click="backMap()" class="btn">返回概览</el-button>
+    <div style="width:100%;height:100%">
+      <el-button size="mini" type="primary" @click="backMap()" class="btn1">返回概览</el-button>
+      <!-- <el-button size="mini" type="primary" @click="this.$router.go(-1)" class="btn2">返回上一级</el-button> -->
       <div id="mapcontainer"></div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -596,7 +595,13 @@ export default {
       };
 
       var townList = {
-        衢山镇: "16321"
+        衢山镇: "16321",
+        长途镇: "16322",
+        高亭镇: "16323",
+        东沙镇: "33071",
+        岱东镇: "33085",
+        岱西镇: "33087",
+        秀山乡: "33089",
       };
       // 点击触发
       myChart.on("click", param => {
@@ -707,14 +712,19 @@ export default {
 
 <style scoped>
 #mapcontainer {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   margin: 0px auto 0;
 }
 
-.btn {
+.btn1 {
   position: absolute;
-  right: 10%;
+  left: 5%;
+  z-index: 999;
+}
+.btn2 {
+  position: absolute;
+  left: 30%;
   z-index: 999;
 }
 </style>

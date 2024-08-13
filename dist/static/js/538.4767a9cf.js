@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue2_0"]=self["webpackChunkvue2_0"]||[]).push([[538],{4538:function(t,n,u){u.r(n),u.d(n,{default:function(){return c}});var e=function(){var t=this,n=t._self._c;return n("div",{staticClass:"body"},[n("div",{staticClass:"content"},[n("h1",[t._v("欢迎来到苟创中学")]),n("p",[t._v("GouChuang Middle School NingBo Branch")]),n("span",[n("router-link",{attrs:{to:"/home"}},[t._v("进入")])],1)])])},s=[],a={},l=a,o=u(1656),r=(0,o.A)(l,e,s,!1,null,"25989639",null),c=r.exports}}]);
+//# sourceMappingURL=538.4767a9cf.js.map

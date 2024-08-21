@@ -43,7 +43,17 @@ const routes = [
     path: '/mapc',
     name: 'mapc',
     component: () => import('@/views/echarts/mapChart.vue')
-  }
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('@/views/test/index.vue')
+  },
+  // {
+  //   path: '/hello',
+  //   name: 'hello',
+  //   component: () => import('@/views/test/HelloWorld.vue')
+  // }
 ]
 
 const router = new VueRouter({

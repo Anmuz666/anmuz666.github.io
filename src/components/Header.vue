@@ -1,18 +1,19 @@
 <template>
-  <div class="body">
+  <div class="headerbk">
     <div class="navbar" id="nav">
-      <div class="logo">
-        <img style="height: 100%;width:100%;object-fit: cover;" src="/imgs/狗头02.jpg" alt="找不到图片"/>
+      <div class="logo" style="font-family: 字魂鸿鹄九天体;">
+        <span>苟创中学</span>
       </div>
-      <div class="menu-icon" @click="toggleMenu" id="menuIcon">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <i
+        style="color: black;"
+        class="el-icon-arrow-left menu-icon"
+        :class="{ 'arrowTransform': !flag, 'arrowTransformReturn': flag}"
+        alt
+        @click="toggleMenu(),flag = !flag"
+      ></i>
       <ul id="navbarMenu">
         <li>
-          <a href="#">首页</a>
+          <router-link to="/starting">回到起点<i class="el-icon-position"></i></router-link>
         </li>
         <li>
           <a href="#">man</a>
@@ -20,13 +21,6 @@
         <li>
           <a href="#">what can i say</a>
         </li>
-        <!-- <div class="search-box">
-          <input type="text" placeholder="Search..." />
-        </div>
-        <div class="buttons">
-          <button class="login">登录</button>
-          <button class="register">注册</button>
-        </div> -->
       </ul>
     </div>
   </div>
@@ -34,31 +28,41 @@
 
 <script>
 export default {
-
   data() {
-    return {};
+    return {
+      flag: false
+    };
   },
-  methods: {  
-    toggleMenu() {  
-      var navbar = document.getElementById('nav');  
-      navbar.classList.toggle('open');  
-    }  
-  },
+  methods: {
+    toggleMenu() {
+      var navbar = document.getElementById("nav");
+      navbar.classList.toggle("open");
+    }
+  }
 };
 </script>
 
 <style scoped>
+@font-face {
+  font-family: 字魂鸿鹄九天体;
+  src: url("@/assets/font/字魂鸿鹄九天体.ttf");
+}
 * {
   box-sizing: border-box;
+}
+.headerbk {
+ 
+  background-color: white; /* 将背景颜色设置为白色 */
 }
 
 .body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffe7df;
 }
-
+.menu-icon {
+  font-size: 0px;
+}
 .navbar {
   background-color: #ffffff;
   color: #fff;
@@ -69,11 +73,8 @@ export default {
 }
 
 .logo {
-  height: 50px;
-  width:50px;
-  /* font-size: 24px;
-  font-weight: bold;
-  color: #232c53; */
+  font-size: 25px;
+  color: #141e46;
 }
 
 .navbar ul {
@@ -98,20 +99,6 @@ export default {
 .navbar li a:hover {
   color: #141e46;
 }
-
-/* .search-box {
-  position: relative;
-}
-
-.search-box input {
-  width: 200px;
-  height: 30px;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 6px;
-  background-color: #eff6f8;
-} */
-
 .buttons {
   display: flex;
 }
@@ -135,9 +122,23 @@ export default {
 }
 /* 添加响应式设计的样式 */
 @media screen and (max-width: 768px) {
+  .arrowTransform {
+    transition: 0.2s;
+    transform-origin: center;
+    transform: rotateZ(0deg);
+  }
+  .arrowTransformReturn {
+    transition: 0.2s;
+    transform-origin: center;
+    transform: rotateZ(-90deg);
+  }
+  .menu-icon {
+    font-size: 20px;
+  }
   .navbar {
     position: relative;
     padding: 10px 10px;
+    height: 45px;
   }
 
   /* 在小屏幕上隐藏导航栏和搜索框等 */
@@ -145,62 +146,6 @@ export default {
   /* .search-box, */
   .buttons {
     display: none;
-  }
-
-  /* 显示汉堡式图标 */
-  .navbar .menu-icon {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-  }
-
-  .navbar .menu-icon span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: #232c53;
-    border-radius: 4px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-  }
-
-  .navbar .menu-icon span:nth-child(1) {
-    top: 0px;
-  }
-
-  .navbar .menu-icon span:nth-child(2),
-  .navbar .menu-icon span:nth-child(3) {
-    top: 10px;
-  }
-
-  .navbar .menu-icon span:nth-child(4) {
-    top: 20px;
-  }
-
-  /* 菜单展开时的样式 */
-  .navbar.open .menu-icon span:nth-child(1) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
-  }
-
-  .navbar.open .menu-icon span:nth-child(2) {
-    transform: rotate(45deg);
-  }
-
-  .navbar.open .menu-icon span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-
-  .navbar.open .menu-icon span:nth-child(4) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
   }
 
   /* 展开菜单时的导航栏样式 */
@@ -220,20 +165,20 @@ export default {
   }
 
   #navbarMenu {
-    width: 100%;
+    width: 40%;
     flex-direction: column;
     gap: 10px;
     padding: 10px 0;
     background-color: #ffffff;
-    border-radius: 10px;
     position: absolute;
-    left: 0;
-    bottom: -118px;
+    right: 0;
+    bottom: -95px;
     text-align: center;
+    border-radius: 0 0 0 15px;
   }
 
   #navbarMenu li a {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 </style>

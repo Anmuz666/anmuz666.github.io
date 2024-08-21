@@ -1,25 +1,26 @@
-#app {
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(
-      125deg,
+.bk {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(125deg,
       rgb(253, 218, 255) 8.2%,
       rgb(223, 173, 252) 19.6%,
       rgb(173, 205, 252) 36.8%,
       rgb(173, 252, 244) 73.2%,
-      rgb(202, 248, 208) 90.9%
-    );
-    background-size: 500%;
-    animation: bgAnimation 30s linear infinite;
+      rgb(202, 248, 208) 90.9%);
+  background-size: 500%;
+  animation: bgAnimation 30s linear infinite;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  @keyframes bgAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+
+  50% {
+    background-position: 100% 50%;
   }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

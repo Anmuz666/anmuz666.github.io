@@ -10,14 +10,19 @@
       <div class="item" @click="routergot('mapc')">大地图</div>
       <div class="item" @click="routergot('starting')">回到欢迎页</div>
       <div class="item a1" @click="getdow()">
-        <p style="  padding-top:100px;"><strong>立即下载</strong></p>
+        <p style="  padding-top:100px;">
+          <strong>立即下载</strong>
+        </p>
       </div>
     </div>
+
+    <lisen></lisen>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import lisen from "@/views/test/listening.vue";
 import axios from "axios";
 export default {
   data() {
@@ -32,7 +37,8 @@ export default {
     };
   },
   components: {
-    Header
+    Header,
+    lisen
   },
   methods: {
     routergot(index) {
@@ -110,14 +116,13 @@ export default {
   overflow-y: auto;
 }
 .a1 {
- 
-color: #f2f2f2;
+  color: #f2f2f2;
   background-size: cover;
   /* 确保背景图片在元素内居中显示 */
   background-position: center;
   /* 防止背景图片重复 */
   background-repeat: no-repeat;
-  background-image: url('@/assets/1.jpg'); 
+  background-image: url("@/assets/1.jpg");
   span {
     top: 0px;
     font-size: 20px;

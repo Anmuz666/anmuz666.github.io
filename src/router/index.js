@@ -49,11 +49,11 @@ const routes = [
     name: 'test',
     component: () => import('@/views/test/index.vue')
   },
-  // {
-  //   path: '/hello',
-  //   name: 'hello',
-  //   component: () => import('@/views/test/HelloWorld.vue')
-  // }
+  {
+    path: '/test1',
+    name: 'test1',
+    component: () => import('@/views/test/listening.vue')
+  }
 ]
 
 const router = new VueRouter({

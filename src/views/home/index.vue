@@ -14,7 +14,7 @@
       <el-main style="background:rgb(243,245,251)">
         <router-view></router-view>
       </el-main>
-      <el-footer style="height: 50px;color: #141e46;background:rgb(250,251,255)">Footer</el-footer>
+      <el-footer style="height: 50px;color: #141e46;background:rgb(250,251,255)">测试版</el-footer>
     </el-container>
     <!-- <Header></Header>
      <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee>

@@ -1,9 +1,25 @@
 <template>
   <div class="bk">
-    <Header></Header>
+    <el-container style="height: 100%;">
+      <el-header style="height: 50px;  font-size: 25px;color: #141e46;background:rgb(250,251,255)">
+        <div style="height:100%;">
+          <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">苟创中学</div>
+          <div style="float: left;"></div>
+          <!-- <router-link to="/home/testMap">
+            <div>我是a组件</div>
+          </router-link>-->
+        </div>
+      </el-header>
+      <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee>
+      <el-main style="background:rgb(243,245,251)">
+        <router-view></router-view>
+      </el-main>
+      <el-footer style="height: 50px;color: #141e46;background:rgb(250,251,255)">Footer</el-footer>
+    </el-container>
+    <!-- <Header></Header>
+     <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee>
     <marquee>黑神话:悟空先行版免费下载</marquee>
     <div class="box1">
-      <div class="item" @click="open()">耐摔王</div>
       <div class="item" @click="getIp()">
         <span>获取ip</span>
       </div>
@@ -14,9 +30,27 @@
           <strong>立即下载</strong>
         </p>
       </div>
-    </div>
+      <div class="item" @click="getIp()">
+        <span>1</span>
+      </div>
+      <div class="item" @click="getIp()">
+        <span>1</span>
+      </div>
+      <div class="item" @click="getIp()">
+        <span>1</span>
+      </div>
+      <div class="item" @click="getIp()">
+        <span>1</span>
+      </div>
+      <div class="item" @click="getIp()">
+        <span>1</span>
+      </div>
+      <div class="item" @click="getIp()">
+        <span>1</span>
+      </div>
+    </div>-->
 
-    <lisen></lisen>
+    <!-- <lisen></lisen> -->
   </div>
 </template>
 
@@ -43,25 +77,6 @@ export default {
   methods: {
     routergot(index) {
       this.$router.push("/" + index);
-    },
-    open() {
-      this.man++;
-
-      if (this.man > 0 && this.man <= 3) {
-        this.$message("man");
-      }
-      if (this.man > 3 && this.man <= 4) {
-        this.$message.warning("孩子这一点都不好笑");
-      }
-      if (this.man > 4 && this.man <= 5) {
-        this.$message.warning("你还man？");
-      }
-      if (this.man > 5 && this.man <= 6) {
-        this.$message.error("曼巴out");
-      }
-      if (this.man > 6) {
-        this.$message.error("...");
-      }
     },
     getIp() {
       axios.get("https://api.vvhan.com/api/visitor.info").then(res => {
@@ -102,6 +117,20 @@ export default {
 
 <style lang="scss" scoped>
 @charset "GBK";
+::v-deep {
+  .el-main {
+    padding: 0px;
+  }
+}
+@font-face {
+  font-family: 字魂鸿鹄九天体;
+  src: url("@/assets/font/字魂鸿鹄九天体.ttf");
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
 .bk {
   height: 100%;
   background-color: #f2f2f2;
@@ -139,9 +168,18 @@ export default {
 }
 /* 媒体查询 */
 @media screen and (max-width: 768px) {
-  .box1 {
+  @font-face {
+    font-family: 字魂鸿鹄九天体;
+    src: url("@/assets/font/字魂鸿鹄九天体.ttf");
+  }
+  .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .box1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
     padding-top: 20px;
     padding-left: 30px;
@@ -151,7 +189,6 @@ export default {
   .item {
     width: 100%;
     height: 150px;
-    border-radius: 10%;
     background-color: hsla(0, 0%, 100%, 0.3);
 
     align-items: center;

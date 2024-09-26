@@ -3,8 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'starting',
     component: () => import('@/views/starting/index.vue')
@@ -15,10 +14,37 @@ const routes = [
     component: () => import('@/views/starting/index.vue')
   },
   {
-    path: '/home',
-    name: 'home',
-    component: () => import('@/views/home/index.vue')
+    path: '/HOME',
+    name: 'HOME',
+    component: () => import('@/views/HOME/index.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: () => import('@/views/HOME/home/index.vue')
+      },
+      {
+      path: 'testMap',
+      name: 'testMap',
+      component: () => import('@/views/map/vueAmap/index.vue')
+    }]
   },
+  {
+    path: '/Download',
+    name: 'Download',
+    component: () => import('@/views/HOME/Download/index.vue'),
+    
+  },
+
+
+
+
+
+
+
+
+
+
   {
     path: '/about',
     name: 'about',
@@ -53,6 +79,12 @@ const routes = [
     path: '/test1',
     name: 'test1',
     component: () => import('@/views/test/listening.vue')
+  },
+  {
+    path: '/testMap',
+    name: 'testMap',
+    component: () => import('@/views/map/vueAmap/index.vue')
+
   }
 ]
 

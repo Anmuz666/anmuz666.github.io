@@ -2,16 +2,17 @@
   <div class="headerbk">
     <div class="navbar" id="nav">
       <div class="logo" style="font-family: 字魂鸿鹄九天体;">
-        <span>苟创中学</span>
+        <!-- <span>苟创中学</span> -->
+         <span></span>
       </div>
-      <i
+      <!-- <i
         style="color: black;"
         class="el-icon-arrow-left menu-icon"
         :class="{ 'arrowTransform': !flag, 'arrowTransformReturn': flag}"
         alt
         @click="toggleMenu(),flag = !flag"
-      ></i>
-      <ul id="navbarMenu">
+      ></i> -->
+      <!-- <ul id="navbarMenu">
         <li>
           <router-link to="/starting">回到起点<i class="el-icon-position"></i></router-link>
         </li>
@@ -21,7 +22,7 @@
         <li>
           <a href="#">what can i say</a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </template>
@@ -30,14 +31,14 @@
 export default {
   data() {
     return {
-      flag: false
+      // flag: false
     };
   },
   methods: {
-    toggleMenu() {
-      var navbar = document.getElementById("nav");
-      navbar.classList.toggle("open");
-    }
+    // toggleMenu() {
+    //   var navbar = document.getElementById("nav");
+    //   navbar.classList.toggle("open");
+    // }
   }
 };
 </script>

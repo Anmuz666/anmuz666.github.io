@@ -1,23 +1,51 @@
 <template>
   <div class="bk">
     <el-container style="height: 100%;">
-      <el-header style="height: 50px;  font-size: 25px;color: #141e46;background:rgb(250,251,255)">
+      <el-header
+        style="height: 50px;  font-size: 25px;color: #141e46; background-image: linear-gradient(to bottom right,rgba(224,243,255,1.00),rgba(193,231,255,1.00),rgba(161,218,255,1), rgba(130,206,255,1),rgba(99,194,255,1));"
+      >
         <div style="height:100%;">
-          <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">苟创中学</div>
+          <!-- <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">苟创中学</div> -->
+          <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">- -</div>
           <div style="float: left;"></div>
-          <!-- <router-link to="/home/testMap">
-            <div>我是a组件</div>
-          </router-link>-->
         </div>
       </el-header>
-      <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee>
+      <!-- <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee> -->
       <el-main style="background:rgb(243,245,251)">
         <router-view></router-view>
       </el-main>
-      <el-footer style="height: 50px;color: #141e46;background:rgb(250,251,255)">测试版</el-footer>
+      <el-footer style="height: 50px;color: #606266;background:rgb(250,251,255)">
+        <div style="display: flex;">
+          <div style="flex: 1;">
+            <div style="margin-top: 5px;" @click="routergot('home')">
+              <div>
+                <i
+                  style="font-size: 25px;color: aqua;"
+                  class="el-icon-receiving"
+                  v-if="this.$route.path=='/home'"
+                ></i>
+                <i style="font-size: 25px;" class="el-icon-receiving" v-else></i>
+              </div>
+              <div style="font-size: 10px;">首页</div>
+            </div>
+          </div>
+          <div style="flex: 1;">
+            <div style="margin-top: 5px;" @click="routergot('other')">
+              <div>
+                <i
+                  style="font-size: 25px;color: aqua;"
+                  class="el-icon-s-promotion"
+                  v-if="this.$route.path=='/other'"
+                ></i>
+                <i style="font-size: 25px;" class="el-icon-s-promotion" v-else></i>
+              </div>
+              <div style="font-size: 10px;">其他</div>
+            </div>
+          </div>
+        </div>
+      </el-footer>
     </el-container>
     <!-- <Header></Header>
-     <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee>
     <marquee>黑神话:悟空先行版免费下载</marquee>
     <div class="box1">
       <div class="item" @click="getIp()">
@@ -29,24 +57,6 @@
         <p style="  padding-top:100px;">
           <strong>立即下载</strong>
         </p>
-      </div>
-      <div class="item" @click="getIp()">
-        <span>1</span>
-      </div>
-      <div class="item" @click="getIp()">
-        <span>1</span>
-      </div>
-      <div class="item" @click="getIp()">
-        <span>1</span>
-      </div>
-      <div class="item" @click="getIp()">
-        <span>1</span>
-      </div>
-      <div class="item" @click="getIp()">
-        <span>1</span>
-      </div>
-      <div class="item" @click="getIp()">
-        <span>1</span>
       </div>
     </div>-->
 
@@ -76,7 +86,11 @@ export default {
   },
   methods: {
     routergot(index) {
-      this.$router.push("/" + index);
+      if (this.$route.path != "/" + index) {
+        this.$router.push("/" + index);
+      } else {
+        console.log("已经是当前页了");
+      }
     },
     getIp() {
       axios.get("https://api.vvhan.com/api/visitor.info").then(res => {

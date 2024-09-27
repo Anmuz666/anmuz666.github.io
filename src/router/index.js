@@ -16,24 +16,34 @@ const routes = [{
   {
     path: '/HOME',
     name: 'HOME',
-    component: () => import('@/views/HOME/index.vue'),
-    children: [
-      {
+    component: () => import('@/views/home/index.vue'),
+    children: [{
         path: '/',
         name: 'home',
-        component: () => import('@/views/HOME/home/index.vue')
+        component: () => import('@/views/home/home/index.vue')
       },
       {
-      path: 'testMap',
-      name: 'testMap',
-      component: () => import('@/views/map/vueAmap/index.vue')
-    }]
+        path: '/home',
+        name: 'home',
+        component: () => import('@/views/home/home/index.vue')
+      },
+      {
+        path: '/other',
+        name: 'other',
+        component: () => import('@/views/home/other/index.vue')
+      },
+    ]
+  },
+  {
+    path: '/testMap',
+    name: 'testMap',
+    component: () => import('@/views/map/vueAmap/index.vue')
   },
   {
     path: '/Download',
     name: 'Download',
-    component: () => import('@/views/HOME/Download/index.vue'),
-    
+    component: () => import('@/views/home/Download/index.vue'),
+
   },
 
 

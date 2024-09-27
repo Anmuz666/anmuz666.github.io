@@ -61,14 +61,14 @@ export default {
   justify-content: center;
   overflow: hidden;
   font-family: Arial, sans-serif;
-  background: linear-gradient(
+  /* background: linear-gradient(
     125deg,
     rgb(253, 218, 255) 8.2%,
     rgb(223, 173, 252) 19.6%,
     rgb(173, 205, 252) 36.8%,
     rgb(173, 252, 244) 73.2%,
     rgb(202, 248, 208) 90.9%
-  );
+  ); */
   background-size: 500%;
   animation: bgAnimation 30s linear infinite;
 }
@@ -130,17 +130,16 @@ button:active {
   }
 }
 
-@keyframes fadeOut {  
-  from {  
-    opacity: 0; /* 起始状态为不可见 */  
-  }  
-  to {  
-    opacity: 1; /* 结束状态为可见 */  
-  }  
+@keyframes fadeOut {
+  from {
+    opacity: 0; /* 起始状态为不可见 */
+  }
+  to {
+    opacity: 1; /* 结束状态为可见 */
+  }
 }
-.goto {  
-  opacity: 0; /* 初始状态设置为不可见，确保在动画开始前元素是不可见的 */  
-  animation: fadeOut 1s ease-out forwards 3s; /* 动画名称，持续时间，动画曲线，填充模式，延迟时间 */  
+.goto {
+  opacity: 0; /* 初始状态设置为不可见，确保在动画开始前元素是不可见的 */
+  animation: fadeOut 1s ease-out forwards 3s; /* 动画名称，持续时间，动画曲线，填充模式，延迟时间 */
 }
-
 </style>

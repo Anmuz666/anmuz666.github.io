@@ -3,31 +3,48 @@
     <div style="padding:0px;background:#ffffff;padding:0px 15px 0px 15px">
       <template v-for="item in items" class="homeListDiv">
         <div
-          style="border-bottom:1px solid #ededed;padding:0px;padding:10px 0px 10px 0px"
+          style="border-bottom:1px solid #ededed;padding:0px;padding:10px 0px 10px 0px;"
           @click="routerGoTo(item)"
         >
           <div>
             <div>
               <h3
-                style="margin: 0;text-align: left;font-weight:500;font-size:16px;margin-bottom:4px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"
+                style="margin: 0px 0px 4px; text-align: left; font-weight: 500; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
               >{{ item.title }}</h3>
             </div>
-            <div>
+            <!-- <div>
               <p
                 style="margin: 0;text-align: left;height:20px;font-size:14px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-bottom:8px"
               >{{ item.content }}</p>
+            </div>-->
+            <div>
+              <p
+                style="margin: 0;word-wrap: break-word;text-align: left;height:20px;font-size:14px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-bottom:8px"
+              >{{ item.content }}</p>
             </div>
-            <div style="text-align:left">
-              <span style="font-size:12px;margin-right:16px">{{ item.createUser }}</span>
-              <span style="font-size:12px;margin-right:16px">{{ item.createTime }}</span>
-              <span style="font-size:12px;margin-right:16px">{{ item.tag }}</span>
+            <div style="text-align:left;margin-bottom:10px" v-if="item.imgurl.lenght!=0">
+              <el-image
+                v-for="URL in item.imgurl.slice(0, 3)"
+                style="height:68px;width:30%;display:inline-block;margin-right:6px"
+                :src="URL.url"
+                :fit="'cover'"
+              ></el-image>
+            </div>
+            <div style="display:flex;justify-content:space-between">
+              <div>
+                <i class="el-icon-download" v-if="item.tag=='down'"></i>
+                <!-- <span style="font-size:12px;margin-right:16px">{{ item.tag }}</span> -->
+              </div>
+              <div>
+                <span
+                  style="font-size:12px;margin-right:16px;text-align: right;"
+                >{{ item.createUser }}</span>
+                <span
+                  style="font-size:12px;margin-right:16px;text-align: right;"
+                >{{ item.createTime }}</span>
+              </div>
             </div>
           </div>
-          <!-- <div>
-            <div>
-              <el-image style="width: 100px; height: 100px" :src="'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'" :fit="'cover'"></el-image>
-            </div>
-          </div>-->
         </div>
       </template>
     </div>
@@ -41,12 +58,41 @@ export default {
   data() {
     return {
       items: [
-        {
-          a: 1
-        },
-        {
-          a: 2
-        }
+        // {
+        //   title:
+        //     "1111111111111111111111111111111111111111111111111111111111111",
+        //   content:
+        //     "1111111111111111111111111111111111111111111111111111111111111",
+        //   createUser: "12312",
+        //   img: "1",
+        //   tag: "1",
+        //   imgurl: [
+        //     {
+        //       url:
+        //         "/homeImg/1727428191656.webp"
+        //     },
+        //     {
+        //       url:
+        //         "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+        //     },
+        //     {
+        //       url:
+        //         "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+        //     },
+        //     {
+        //       url:
+        //         "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+        //     }
+        //   ],
+        //   createTime: "createTime"
+        // },
+        // {
+        //   title:
+        //     "1111111111111111111111111111111111111111111111111111111111111",
+        //   content: "132123",
+        //   createUser: "12312",
+        //   img: "0"
+        // }
       ]
     };
   },
@@ -61,9 +107,11 @@ export default {
       });
     },
     routerGoTo(index) {
-      let data = [{
-        uuid: index.uuid
-      }];
+      let data = [
+        {
+          uuid: index.uuid
+        }
+      ];
       if (index.tag == "down") {
         this.$router.push({
           name: "Download",
@@ -71,6 +119,16 @@ export default {
             data: JSON.stringify(data)
           }
         });
+        // this.$router.push("/Download");
+      }
+      if (index.tag == "outDown") {
+        this.$message.error("该功能未开通")
+        // this.$router.push({
+        //   name: "Download",
+        //   query: {
+        //     data: JSON.stringify(data)
+        //   }
+        // });
         // this.$router.push("/Download");
       }
 
@@ -102,6 +160,9 @@ export default {
   }
   .el-main {
     padding: 0px;
+  }
+  .el-tag {
+    border-radius: 0px;
   }
 }
 </style>

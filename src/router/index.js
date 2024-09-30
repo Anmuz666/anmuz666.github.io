@@ -16,21 +16,21 @@ const routes = [{
   {
     path: '/HOME',
     name: 'HOME',
-    component: () => import('@/views/home/index.vue'),
+    component: () => import('@/views/center/index.vue'),
     children: [{
         path: '/',
         name: 'home',
-        component: () => import('@/views/home/home/index.vue')
+        component: () => import('@/views/center/centerMain/index.vue')
       },
       {
         path: '/home',
         name: 'home',
-        component: () => import('@/views/home/home/index.vue')
+        component: () => import('@/views/center/centerMain/index.vue')
       },
       {
         path: '/other',
         name: 'other',
-        component: () => import('@/views/home/other/index.vue')
+        component: () => import('@/views/center/other/index.vue')
       },
     ]
   },
@@ -40,9 +40,15 @@ const routes = [{
     component: () => import('@/views/map/vueAmap/index.vue')
   },
   {
-    path: '/Download',
-    name: 'Download',
-    component: () => import('@/views/home/Download/index.vue'),
+    path: '/localDownload',
+    name: 'localDownload',
+    component: () => import('@/views/center/otherPage/localDownload.vue'),
+
+  },
+  {
+    path: '/outDownload',
+    name: 'outDownload',
+    component: () => import('@/views/center/otherPage/outDownload.vue'),
 
   },
 

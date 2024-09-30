@@ -1,71 +1,28 @@
 <template>
   <div class="bk">
     <el-container style="height: 100%;">
-      <el-header
-        style="height: 50px;  font-size: 25px;color: #141e46; background-image: linear-gradient(to bottom right,rgba(224,243,255,1.00),rgba(193,231,255,1.00),rgba(161,218,255,1), rgba(130,206,255,1),rgba(99,194,255,1));"
-      >
-        <div style="height:100%;">
-          <!-- <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">苟创中学</div> -->
-          <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">- -</div>
-          <div style="float: left;"></div>
-        </div>
-      </el-header>
-      <!-- <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee> -->
+     
       <el-main style="background:rgb(243,245,251)">
         <router-view></router-view>
       </el-main>
       <el-footer style="height: 50px;color: #606266;background:rgb(250,251,255)">
-        <div style="display: flex;">
-          <div style="flex: 1;">
-            <div style="margin-top: 5px;" @click="routergot('home')">
-              <div>
-                <i
-                  style="font-size: 25px;color: aqua;"
-                  class="el-icon-receiving"
-                  v-if="this.$route.path=='/home'"
-                ></i>
-                <i style="font-size: 25px;" class="el-icon-receiving" v-else></i>
-              </div>
-              <div style="font-size: 10px;">首页</div>
-            </div>
-          </div>
-          <div style="flex: 1;">
-            <div style="margin-top: 5px;" @click="routergot('other')">
-              <div>
-                <i
-                  style="font-size: 25px;color: aqua;"
-                  class="el-icon-s-promotion"
-                  v-if="this.$route.path=='/other'"
-                ></i>
-                <i style="font-size: 25px;" class="el-icon-s-promotion" v-else></i>
-              </div>
-              <div style="font-size: 10px;">其他</div>
-            </div>
-          </div>
-        </div>
+        <centerFooter></centerFooter>
       </el-footer>
     </el-container>
-    <!-- <Header></Header>
-    <marquee>黑神话:悟空先行版免费下载</marquee>
+    <!--
     <div class="box1">
       <div class="item" @click="getIp()">
         <span>获取ip</span>
       </div>
       <div class="item" @click="routergot('mapc')">大地图</div>
       <div class="item" @click="routergot('starting')">回到欢迎页</div>
-      <div class="item a1" @click="getdow()">
-        <p style="  padding-top:100px;">
-          <strong>立即下载</strong>
-        </p>
-      </div>
     </div>-->
-
     <!-- <lisen></lisen> -->
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
+import centerFooter from "@/views/center/centerFooter/index.vue";
 import lisen from "@/views/test/listening.vue";
 import axios from "axios";
 export default {
@@ -81,7 +38,7 @@ export default {
     };
   },
   components: {
-    Header,
+    centerFooter,
     lisen
   },
   methods: {
@@ -122,9 +79,6 @@ export default {
         }
       });
     },
-    getdow() {
-      window.location.href = "https://pan.quark.cn/s/5936a4ff2ebc";
-    }
   }
 };
 </script>
@@ -136,19 +90,17 @@ export default {
     padding: 0px;
   }
 }
-@font-face {
-  font-family: 字魂鸿鹄九天体;
-  src: url("@/assets/font/字魂鸿鹄九天体.ttf");
+
+.bk {
+  height: 100%;
+  background-color: #f2f2f2;
 }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.bk {
-  height: 100%;
-  background-color: #f2f2f2;
-}
+
 .s {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -171,15 +123,6 @@ export default {
     font-size: 20px;
   }
 }
-.item {
-  width: 100%;
-  height: 150px;
-  border-radius: 5%;
-  background-color: hsla(0, 0%, 100%, 0.3);
-
-  align-items: center;
-  justify-content: center;
-}
 /* 媒体查询 */
 @media screen and (max-width: 768px) {
   @font-face {
@@ -199,14 +142,6 @@ export default {
     padding-left: 30px;
     padding-right: 30px;
     overflow-y: auto;
-  }
-  .item {
-    width: 100%;
-    height: 150px;
-    background-color: hsla(0, 0%, 100%, 0.3);
-
-    align-items: center;
-    justify-content: center;
   }
 }
 </style>

@@ -35,6 +35,24 @@ export default {
   animation: enterenter 3s 1 cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.enter:before {
+    content: "";
+    position: absolute;  
+    top: 0;
+    right: 0;
+    bottom: 0;  
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    will-change: opacity;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+.enter:hover:before {
+    opacity: 1;
+}
+
 @keyframes enterenter {
   0% {
     /* 加上文字间距 */
@@ -61,11 +79,12 @@ export default {
   justify-content: center;
   overflow: hidden;
   font-family: Arial, sans-serif;
+  background: #021b48;
   /* background: linear-gradient(
     125deg,
-    rgb(253, 218, 255) 8.2%,
-    rgb(223, 173, 252) 19.6%,
-    rgb(173, 205, 252) 36.8%,
+    rgba(99,194,255,1.00)8.2%,
+    rgba(115,200,255,1.00) 19.6%,
+    rgba(130,206,255,1.00) 36.8%,
     rgb(173, 252, 244) 73.2%,
     rgb(202, 248, 208) 90.9%
   ); */
@@ -115,8 +134,8 @@ button {
 }
 
 button:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  color: #00eeff;
+  box-shadow: inset 4px 4px 12px #00eeff, inset -4px -4px 12px #00eeff;
 }
 @keyframes bgButton {
   0% {

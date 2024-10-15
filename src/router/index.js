@@ -34,6 +34,18 @@ const routes = [{
       },
     ]
   },
+  //pc页面->
+  {
+    path: '/pc',
+    name: 'pc',
+    component: () => import('@/views/pc/recommend/index.vue'),
+  },
+  {
+    path: '/picWarehouse',
+    name: 'picWarehouse',
+    component: () => import('@/views/pc/picWarehouse/index.vue'),
+  },
+  //pc页面<-
   {
     path: '/testMap',
     name: 'testMap',
@@ -90,6 +102,11 @@ const routes = [{
     path: '/test',
     name: 'test',
     component: () => import('@/views/test/index.vue')
+  },
+  {
+    path: '/test1',
+    name: 'test1',
+    component: () => import('@/views/test/index1.vue')
   },
   {
     path: '/test1',

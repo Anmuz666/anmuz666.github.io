@@ -8,16 +8,20 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^1.6.2",
     "core-js": "^3.8.3",
+    "crypto-js": "^4.2.0",
     "echarts": "^5.4.3",
     "element-ui": "^2.15.14",
     "jquery": "^3.5.1",
     "js-cookie": "^3.0.5",
+    "kuan-vue-flip-clock": "^1.0.1",
     "less": "^4.2.0",
     "vue": "^2.6.14",
     "vue-amap": "^0.5.10",
     "vue-aplayer": "^1.6.1",
+    "vue-calendar-component": "^2.8.2",
     "vue-i18n": "^8.22.2",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
@@ -27,8 +31,8 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
+    "sass": "^1.79.5",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.14"
   },
   "browserslist": [

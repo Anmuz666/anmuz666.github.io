@@ -4,7 +4,7 @@
       <div style="height:100%;">
         <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">苟创中学</div>
         <!-- <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">- -</div> -->
-        <div style="float: left;"></div>
+        <div style="float: right;font-size:10px">移动端,pc端请用电脑打开</div>
       </div>
     </el-header>
      <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee>

@@ -2,11 +2,17 @@
   <div style="height: 100%;">
     <div style="height: 100px;background-color:azure;position:sticky;top:0;z-index:1;box-shadow: 0px 0px 10px #e0dede;">
       <div>
-        <a href="/pc">
+        <!-- <a href="/pc">
           <button class="headListButton"> {{ $t('navbar.recommend') }}</button>
         </a>
         <a href="/picWarehouse">
           <button class="headListButton"> {{ $t('navbar.ImageRepository') }}</button>
+        </a> -->
+        <a>
+          <button class="headListButton" @click="goto('/pc')"> {{ $t('navbar.recommend') }}</button>
+        </a>
+        <a>
+          <button class="headListButton" @click="goto('/picWarehouse')"> {{ $t('navbar.ImageRepository') }}</button>
         </a>
       </div>
       <Lang class="right-menu-item" style=" position: absolute;right: 160px;top:10px;color:black"></Lang>
@@ -60,6 +66,13 @@ export default {
   },
   mounted() { },
   methods: {
+    goto(index) {
+      if (this.$route.fullPath !== index) {
+        this.$router.push(index);
+      } else {
+        console.log("目标位置与当前位置相同，跳过导航");
+      }
+    },
 
   }
 };

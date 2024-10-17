@@ -11,5 +11,8 @@ export default {
         Saturday: "土曜日",
         Sunday: "日曜日",
         STOPDOGBARKING: "犬はキャンパス内で吠えることを禁じられており、不従順な人はパンホン公園に送られます",
+        DevelopmentLogs:"開発ログ",
+        ThereIsNothingHere:"ここには何もありません",
+
     }
 }

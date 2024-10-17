@@ -12,9 +12,9 @@ Vue.use(ElementUI, {
   size: Cookies.get('size') || 'medium' ,  // set element-ui default size
   i18n: (key, value) => i18n.t(key, value) 
 })
-import Lang from '@/components/Lang'
- 
-Vue.component('Lang', Lang)
+import Lang from '@/components/Lang'//引入语言切换组件
+Vue.component('Lang', Lang)//注册语言切换组件
+
 import VueAMap from "vue-amap";
 Vue.use(VueAMap);
 // 初始化vue-amap
@@ -24,10 +24,13 @@ VueAMap.initAMapApiLoader({
   v: "1.4.15",
   uiVersion: "1.1"
 });
+
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
 Vue.use(ElementUI)
 
+import VueParticles from 'vue-particles'//粒子效果https://vue-particles.netlify.app/
+Vue.use(VueParticles)
 
 new Vue({
   router,

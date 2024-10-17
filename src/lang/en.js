@@ -11,5 +11,7 @@ export default {
         Saturday:"Saturday",
         Sunday:"Sunday",
         STOPDOGBARKING:"Dogs are forbidden to bark on campus, and those who are disobedient will be sent to Panhong Park",
+        DevelopmentLogs:"Development logs",
+        ThereIsNothingHere:"There is nothing here",
     }
 }

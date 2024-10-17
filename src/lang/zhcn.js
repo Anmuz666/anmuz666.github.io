@@ -11,5 +11,7 @@ export default {
         Saturday:"星期六",
         Sunday:"星期日",
         STOPDOGBARKING:"校园内禁止狗叫，不听话的送潘宏园区",
+        DevelopmentLogs:"开发日志",
+        ThereIsNothingHere:"这里什么都没有",
     },
 }

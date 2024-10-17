@@ -45,7 +45,12 @@ const routes = [{
     name: 'picWarehouse',
     component: () => import('@/views/pc/picWarehouse/index.vue'),
   },
-  //pc页面<-
+  {
+    path: '/developmentLogs',
+    name: 'developmentLogs',
+    component: () => import('@/views/pc/developmentLogs/index.vue'),
+  },
+  //<-pc页面
   {
     path: '/testMap',
     name: 'testMap',

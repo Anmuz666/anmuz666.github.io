@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvue2_0"]=self["webpackChunkvue2_0"]||[]).push([[488],{89488:function(n,t,u){u.r(t),u.d(t,{default:function(){return f}});var e=function(){var n=this;n._self._c;return n._m(0)},r=[function(){var n=this,t=n._self._c;return t("div",[t("p",{staticStyle:{"margin-top":"30px"}},[n._v("这里空空如也，什么都没有")])])}],l={},s=l,c=u(81656),i=(0,c.A)(s,e,r,!1,null,null,null),f=i.exports}}]);
-//# sourceMappingURL=488.c4c1d4f0.js.map

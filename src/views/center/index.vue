@@ -17,13 +17,12 @@
       <div class="item" @click="routergot('mapc')">大地图</div>
       <div class="item" @click="routergot('starting')">回到欢迎页</div>
     </div>-->
-    <!-- <lisen></lisen> -->
+
   </div>
 </template>
 
 <script>
 import centerFooter from "@/views/center/centerFooter/index.vue";
-import lisen from "@/views/test/listening.vue";
 import axios from "axios";
 export default {
   data() {
@@ -39,7 +38,7 @@ export default {
   },
   components: {
     centerFooter,
-    lisen
+
   },
   methods: {
     routergot(index) {

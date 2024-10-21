@@ -108,11 +108,6 @@ const routes = [{
     name: 'test1',
     component: () => import('@/views/test/index1.vue')
   },
-  {
-    path: '/test1',
-    name: 'test1',
-    component: () => import('@/views/test/listening.vue')
-  },
 ]
 
 const router = new VueRouter({

@@ -18,7 +18,7 @@
         <Lang class="lang" title="点击切换语言"></Lang>
       </div>
     </div>
-    <marquee>{{ $t('navbar.STOPDOGBARKING') }}</marquee>
+    <marquee>{{ $t('navbar.STOPDOGBARKING') }}<a href="https://www.baidu.com">Example Link</a></marquee>
     <div class="pcBody">
       {{ $t('navbar.ThereIsNothingHere') }}
     </div>
@@ -48,6 +48,9 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  position: sticky; //用于保持元素置顶
+  top: 0; //用于保持元素置顶
+  z-index: 1; //用于保持元素置顶
   background: #fff;
   z-index: 3;
   width: 100%;

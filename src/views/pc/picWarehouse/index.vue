@@ -63,6 +63,9 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+    position: sticky; //用于保持元素置顶
+    top: 0; //用于保持元素置顶
+    z-index: 1; //用于保持元素置顶
     width: 100%;
     min-width: 1280px;
     height: 48px;

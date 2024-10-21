@@ -52,11 +52,6 @@ const routes = [{
   },
   //<-pc页面
   {
-    path: '/testMap',
-    name: 'testMap',
-    component: () => import('@/views/map/vueAmap/index.vue')
-  },
-  {
     path: '/localDownload',
     name: 'localDownload',
     component: () => import('@/views/center/otherPage/localDownload.vue'),
@@ -118,12 +113,6 @@ const routes = [{
     name: 'test1',
     component: () => import('@/views/test/listening.vue')
   },
-  {
-    path: '/testMap',
-    name: 'testMap',
-    component: () => import('@/views/map/vueAmap/index.vue')
-
-  }
 ]
 
 const router = new VueRouter({

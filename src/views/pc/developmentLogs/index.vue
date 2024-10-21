@@ -23,13 +23,22 @@
                 <p>1.测试1.0<br>&emsp;更新时间：<time>2024-10-17</time><br>
                 </p>
                 <ol>
-                    <li>PC添加<ins>日志页面</ins></li>
+                    <li>PC添加<strong>日志页面</strong></li>
                     <li>移除PC推荐页的<del>日历</del></li>
                     <li>删除<del>kuan-vue-flip-clock</del>组件</li>
                     <li>删除<del>vue-calendar-component</del>组件</li>
-                    <li>统一PC页面<strong>导航栏</strong></li>
-                    <li>PC添加<ins>vue-particles</ins>，推荐页添加<strong>粒子效果</strong></li>
+                    <li>统一PC页面<ins>导航栏</ins></li>
+                    <li>PC添加<strong>vue-particles</strong>，推荐页添加<strong>粒子效果</strong></li>
                     <li>PC推荐页添加<strong>鼠标点击爱心效果</strong></li>
+                </ol>
+                <p>2.测试1.1<br>&emsp;更新时间：<time>2024-10-18</time><br>
+                </p>
+                <ol>
+                    <li>删除隐藏<del>高德地图测试页</del></li>
+                    <li>删除<del>vue-amap</del>组件</li>
+                    <li>删除隐藏<del>音乐播放器测试页</del></li>
+                    <li>删除<del>vue-aplayer</del>组件</li>
+                    <li>导航栏优化<strong>保持置顶</strong></li>
                 </ol>
             </div>
             <div class="footer">
@@ -62,12 +71,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Logboday {
-    height: 100%;
     width: 100%;
     background-color: #e6e6e6;
     clear: both;
 
     .Loghead {
+        position:sticky;//用于保持元素置顶
+        top:0;//用于保持元素置顶
+        z-index:1;//用于保持元素置顶
         background: #fff;
         width: 100%;
         min-width: 1280px;

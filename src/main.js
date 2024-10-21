@@ -15,16 +15,6 @@ Vue.use(ElementUI, {
 import Lang from '@/components/Lang'//引入语言切换组件
 Vue.component('Lang', Lang)//注册语言切换组件
 
-import VueAMap from "vue-amap";
-Vue.use(VueAMap);
-// 初始化vue-amap
-VueAMap.initAMapApiLoader({
-  key: "18d1be06e5204f1139cb056b345c97e4", // 这里写你申请的高德地图的key可以去https://console.amap.com/申请key
-  plugin: ["AMap.Autocomplete", "AMap.Geocoder", "AMap.Geolocation"],
-  v: "1.4.15",
-  uiVersion: "1.1"
-});
-
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
 Vue.use(ElementUI)

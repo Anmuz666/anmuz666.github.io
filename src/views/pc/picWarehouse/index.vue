@@ -14,34 +14,40 @@
                 <Lang class="lang" title="点击切换语言"></Lang>
             </div>
         </div>
-        <div style="width:100%;">
+        <!-- <div style="width:100%;">
             <div style="width: calc(100% - 310px); margin: 0px auto;margin-top:10px" class="grid-container">
                 <el-image v-for="item in items" :key="item.id" class="grid-item"
                     style="display:inline-block;margin-right:6px" :src="item.url" :fit="'cover'"></el-image>
             </div>
+        </div> -->
+        <div class="picBody">
+            <Waterfall :list="list" style="background-color: transparent;">
+                <template #item="{ item, url, index }">
+                    <div class="card">
+                        <LazyImg class="card_img" :url="url" />
+                    </div>
+                </template>
+            </Waterfall>
         </div>
     </div>
 </template>
 
 <script>
 import axios from "axios";
-
+import { LazyImg, Waterfall } from 'vue-waterfall-plugin'
+import 'vue-waterfall-plugin/dist/style.css'
 export default {
     data() {
         return {
-            items: [
-
-            ],
+            list: [
+            ]
         };
     },
-    components: {},
+    components: { LazyImg, Waterfall }, // 组件列表
     created() {
         this.getHomelist()
     },
-    mounted() {
-
-
-    },
+    mounted() { },
     methods: {
         goto(index) {
             if (this.$route.fullPath !== index) {
@@ -52,11 +58,12 @@ export default {
         },
         getHomelist() {
             axios.get("/JSON/picWarehouse/20241015.json").then(res => {
-                this.items = res.data.data;
-                console.log(res.data.data);
+                this.list = res.data.data.map(item => ({
+                    src: item.url
+                }));
+                // this.list = res.data.data;
             });
         },
-
     }
 };
 </script>
@@ -127,6 +134,24 @@ export default {
 
     }
 
+}
+
+.picBody {
+    width: 79%;
+    min-width: 950px;
+
+    margin: 0 auto;
+    // padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    color: #000;
+    line-height: 1.7;
+    font-size: 14px;
+
+    .card_img {
+        border-radius: 5px;
+    }
 }
 
 .grid-container {

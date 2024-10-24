@@ -10,12 +10,12 @@
       <span class="goto">
         <span @click="goto()" class="goto">进入</span>
       </span>
-
     </div>
   </div>
 </template>
 
 <script>
+import {getflag} from "@/components/index.js"
 export default {
   data() {
     return {
@@ -27,10 +27,7 @@ export default {
   computed: {},
   methods: {
     goto() {
-      let flag = navigator.userAgent.match(
-        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-      );
-      if (flag) {
+      if (getflag()) {
         this.$router.push("/home");
         console.log("/mobile");
       } else {

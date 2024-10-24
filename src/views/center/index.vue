@@ -124,10 +124,10 @@ export default {
 }
 /* 媒体查询 */
 @media screen and (max-width: 768px) {
-  @font-face {
-    font-family: 字魂鸿鹄九天体;
-    src: url("@/assets/font/字魂鸿鹄九天体.ttf");
-  }
+  // @font-face {
+  //   font-family: 字魂鸿鹄九天体;
+  //   src: url("@/assets/font/字魂鸿鹄九天体.ttf");
+  // }
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -2,8 +2,8 @@
   <div style="max-width: 1024px;margin: auto;">
     <el-header class="elHeader" style="height: 50px;">
       <div style="height:100%;">
-        <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">苟创中学</div>
-        <!-- <div style="float: left;line-height:45px;font-family: 字魂鸿鹄九天体;">- -</div> -->
+        <div style="float: left;line-height:45px;">苟创中学</div>
+        <!-- <div style="float: left;line-height:45px;">- -</div> -->
         <div style="float: right;font-size:10px">移动端,pc端请用电脑打开</div>
       </div>
     </el-header>
@@ -156,10 +156,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@font-face {
-  font-family: 字魂鸿鹄九天体;
-  src: url("@/assets/font/字魂鸿鹄九天体.ttf");
-}
 .homeListDiv:active {
   background: rgb(243, 245, 251);
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="headerbk">
     <div class="navbar" id="nav">
-      <div class="logo" style="font-family: 字魂鸿鹄九天体;">
+      <div class="logo">
         <!-- <span>苟创中学</span> -->
         <span>11</span>
       </div>
@@ -19,10 +19,10 @@ export default {
 </script>
   
   <style scoped>
-@font-face {
+/* @font-face {
   font-family: 字魂鸿鹄九天体;
   src: url("@/assets/font/字魂鸿鹄九天体.ttf");
-}
+} */
 * {
   box-sizing: border-box;
 }

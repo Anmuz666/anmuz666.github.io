@@ -11,6 +11,7 @@
             {{ $t('navbar.recommend') }}</li>
           <li @click="goto('/picWarehouse')" title="这里是赛博丹炉房">{{ $t('navbar.ImageRepository') }}</li>
           <li @click="goto('/developmentLogs')" title="开发日志/更新日志"> {{ $t('navbar.DevelopmentLogs') }}</li>
+          <li @click="goto('/test')" title="test" v-if="this.NODE_ENV == 'development'"> test</li>
         </ul>
       </div>
       <div class="center"></div>
@@ -18,9 +19,9 @@
         <Lang class="lang" title="点击切换语言"></Lang>
       </div>
     </div>
-    <marquee>{{ $t('navbar.STOPDOGBARKING') }}<a href="https://www.baidu.com">Example Link</a></marquee>
     <div class="pcBody">
-      {{ $t('navbar.ThereIsNothingHere') }}
+      <marquee>{{ $t('navbar.STOPDOGBARKING') }}</marquee>
+      <!-- {{ $t('navbar.ThereIsNothingHere') }} -->
     </div>
   </div>
 </template>
@@ -29,10 +30,15 @@
 import "@/utils/onclickax.js"
 export default {
   data() {
-    return {};
+    return {
+      NODE_ENV: ""
+    };
   },
   components: {},
-  created() { },
+  created() {
+    //获取开发环境
+    this.NODE_ENV = process.env.NODE_ENV
+  },
   mounted() { },
   methods: {
     goto(index) {

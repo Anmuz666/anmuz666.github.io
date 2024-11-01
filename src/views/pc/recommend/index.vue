@@ -21,6 +21,7 @@
     </div>
     <div class="pcBody">
       <marquee>{{ $t('navbar.STOPDOGBARKING') }}</marquee>
+      <el-button type="primary" plain @click="gotoplay()">去盖楼</el-button>
       <!-- {{ $t('navbar.ThereIsNothingHere') }} -->
     </div>
   </div>
@@ -48,15 +49,19 @@ export default {
         console.log("目标位置与当前位置相同，跳过导航");
       }
     },
+
+    gotoplay(){
+      window.open("builder.html")
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  position: sticky; //用于保持元素置顶
-  top: 0; //用于保持元素置顶
-  z-index: 1; //用于保持元素置顶
+  // position: sticky; //用于保持元素置顶
+  // top: 0; //用于保持元素置顶
+  // z-index: 1; //用于保持元素置顶
   background: #fff;
   z-index: 3;
   width: 100%;
@@ -120,6 +125,7 @@ export default {
 }
 
 .pcBody {
+  position: relative;
   width: 65%;
   min-width: 950px;
   background-color: #fff;

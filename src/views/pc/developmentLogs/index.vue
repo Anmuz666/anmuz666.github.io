@@ -29,6 +29,7 @@
                 <p>7. 测试1.6<br>&emsp;更新时间：<time>2024-11-04</time><br></p>
                 <ol>
                     <li>PC搬运<strong>超Q弹跳跃游戏-谁能逃出生天?</strong>小游戏<a href="https://code.juejin.cn/pen/7166586991231008805" target="_blank">原地址传送门</a></li>
+                    <li>PC搬运<strong>压扁小鸟</strong>小游戏<a href="https://www.jq22.com/jquery-info17757" target="_blank">原地址传送门</a></li>
                 </ol>
                 <p>6. 测试1.5<br>&emsp;更新时间：<time>2024-11-01</time><br></p>
                 <ol>

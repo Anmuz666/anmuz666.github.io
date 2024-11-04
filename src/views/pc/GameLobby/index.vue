@@ -17,9 +17,11 @@
         <div class="pcBody">
             <div class="grid-container">
                 <div v-for="(item, index) in GAMELIST" :key="index" class="grid-item"  @click="gotoplay(item.htmlUrl)">
-                    <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl &&item.side=='outside'"
+                    <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl &&item.side=='juejin'"
                     :src="cleanedImgUrl(item.imgUrl)">
                     <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl &&item.side=='inside'"
+                    :src="item.imgUrl">
+                    <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl &&item.side=='jq22'"
                     :src="item.imgUrl">
                     <p v-if="typeof item === 'object'">{{ item.gameName }}</p>
                 </div>

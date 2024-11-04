@@ -6,13 +6,19 @@
             "imgUrl": "https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d0013c90ec24b67be4d6945a6e27ce4~tplv-k3u1fbpfcp-jj:500:0:0:0:q75.avis",
             "gameName":"盖塔楼",
             "htmlUrl":"BuildFloor",
-            "side":"outside"
+            "side":"juejin"
         },
         {
             "imgUrl": "/imgs/53934d6e605f493faca15f499b95ab11.gif",
             "gameName":"井底之蛙",
             "htmlUrl":"GreenFrog",
             "side":"inside"
+        },
+        {
+            "imgUrl": "https://www.jq22.com/plugin/2018-01-10-01-22-49.png",
+            "gameName":"压扁小鸟",
+            "htmlUrl":"CrushTheBird",
+            "side":"jq22"
         }
 
     ]

@@ -4,9 +4,9 @@
             <div class="left">
                 <ul>
                     <li @click="goto('/pc')" title="回到推荐页">
-                        {{ $t('navbar.recommend') }}</li>
+                        {{ $t('NAVBAR.recommend') }}</li>
                     <li style=" border-top: 3px solid #fc5531;" @click="goto('/picWarehouse')" title="你已经再图片仓库了">
-                        {{ $t('navbar.ImageRepository') }}</li>
+                        {{ $t('NAVBAR.Gallery') }}</li>
                 </ul>
             </div>
             <div class="center"></div>

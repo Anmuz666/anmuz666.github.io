@@ -4,7 +4,7 @@
             <div class="left">
                 <ul>
                     <li @click="goto('/pc')" title="回到推荐页">
-                        {{ $t('navbar.recommend') }}</li>
+                        {{ $t('NAVBAR.recommend') }}</li>
                 </ul>
             </div>
             <div class="center"></div>
@@ -26,6 +26,14 @@
             </div>
             <div class="main">
                 <!--main-->
+                <p>7. 测试1.6<br>&emsp;更新时间：<time>2024-11-04</time><br></p>
+                <ol>
+                    <li>PC搬运<strong>超Q弹跳跃游戏-谁能逃出生天?</strong>小游戏<a href="https://code.juejin.cn/pen/7166586991231008805" target="_blank">原地址传送门</a></li>
+                </ol>
+                <p>6. 测试1.5<br>&emsp;更新时间：<time>2024-11-01</time><br></p>
+                <ol>
+                    <li>PC搬运<strong>盖塔楼</strong>小游戏<a href="https://code.juejin.cn/pen/7165883287708270625s" target="_blank">原地址传送门</a></li>
+                </ol>
                 <p>5. 测试1.4<br>&emsp;更新时间：<time>2024-10-24</time><br></p>
                 <ol>
                     <li>添加<strong>vue-waterfall-plugin</strong>组件</li>
@@ -36,7 +44,7 @@
 
                 <p>4. 测试1.3<br>&emsp;更新时间：<time>2024-10-22</time><br></p>
                 <ol>
-                    <li>日志页添加<strong>shields徽章</strong></li>
+                    <li>PC日志页添加<strong>shields徽章</strong></li>
                     <li>移除<del>字魂鸿鹄九天体</del></li>
                 </ol>
 
@@ -50,7 +58,7 @@
                 <ol>
                     <li>删除隐藏<del>高德地图测试页</del></li>
                     <li>删除<del>vue-amap</del>和<del>vue-aplayer</del>组件</li>
-                    <li>导航栏优化<strong>保持置顶</strong></li>
+                    <li>PC导航栏优化<strong>保持置顶</strong></li>
                 </ol>
 
                 <p>1. 测试1.0<br>&emsp;更新时间：<time>2024-10-17</time><br></p>

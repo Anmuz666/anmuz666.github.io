@@ -6,14 +6,14 @@ import {
 } from "@/components/index.js"
 
 const routes = [
-  //默认页面
   {
+    //默认页面
     path: '/',
     name: 'starting',
     component: () => import('@/views/starting/index.vue')
   },
-  //欢迎页
   {
+    //欢迎页
     path: '/starting',
     name: 'starting',
     component: () => import('@/views/starting/index.vue')
@@ -22,40 +22,40 @@ const routes = [
   {
     path: '/HOME',
     name: 'HOME',
-    component: () => import('@/views/center/index.vue'),
+    component: () => import('@/views/mobile/index.vue'),
     meta: {
       isAuth: true,
       permissions: 'mobile',
       title: 'HOME'
     },
     children: [
-      //移动默认页
       {
+        //移动默认页
         path: '/',
         name: 'home',
-        component: () => import('@/views/center/centerMain/index.vue'),
+        component: () => import('@/views/mobile/centerMain/index.vue'),
         meta: {
           isAuth: true,
           permissions: 'mobile',
           title: 'home'
         },
       },
-      //移动首页
       {
+        //移动首页
         path: '/home',
         name: 'home',
-        component: () => import('@/views/center/centerMain/index.vue'),
+        component: () => import('@/views/mobile/centerMain/index.vue'),
         meta: {
           isAuth: true,
           permissions: 'mobile',
           title: 'home'
         },
       },
-      //移动其他页
       {
+         //移动其他页
         path: '/other',
         name: 'other',
-        component: () => import('@/views/center/other/index.vue'),
+        component: () => import('@/views/mobile/other/index.vue'),
         meta: {
           isAuth: true,
           permissions: 'mobile',
@@ -66,8 +66,8 @@ const routes = [
   },
   //<-移动页面
   //pc页面->
-  //pc首页
   {
+    //pc首页
     path: '/pc',
     name: 'pc',
     component: () => import('@/views/pc/recommend/index.vue'),
@@ -77,8 +77,19 @@ const routes = [
       title: 'pc'
     }
   },
-  //pc图片仓库
   {
+    //游戏大厅
+    path: '/GameLobby',
+    name: 'GameLobby',
+    component: () => import('@/views/pc/GameLobby/index.vue'),
+    meta: {
+      isAuth: true,
+      permissions: 'pc',
+      title: 'GameLobby'
+    }
+  },
+  {
+    //pc图片仓库
     path: '/picWarehouse',
     name: 'picWarehouse',
     component: () => import('@/views/pc/picWarehouse/index.vue'),
@@ -88,8 +99,8 @@ const routes = [
       title: 'picWarehouse'
     }
   },
-  //pc日志
   {
+    //pc日志
     path: '/developmentLogs',
     name: 'developmentLogs',
     component: () => import('@/views/pc/developmentLogs/index.vue'),
@@ -99,8 +110,8 @@ const routes = [
       title: 'developmentLogs'
     }
   },
-  //pc测试页
   {
+    //pc测试页
     path: '/test',
     name: 'test',
     component: () => import('@/views/pc/test/index.vue'),
@@ -111,18 +122,18 @@ const routes = [
     }
   },
   //<-pc页面
-  //内部下载
   {
+    //内部下载
     path: '/localDownload',
     name: 'localDownload',
-    component: () => import('@/views/center/otherPage/localDownload.vue'),
+    component: () => import('@/views/mobile/otherPage/localDownload.vue'),
 
   },
-  //外部下载
   {
+    //外部下载
     path: '/outDownload',
     name: 'outDownload',
-    component: () => import('@/views/center/otherPage/outDownload.vue'),
+    component: () => import('@/views/mobile/otherPage/outDownload.vue'),
 
   },
 

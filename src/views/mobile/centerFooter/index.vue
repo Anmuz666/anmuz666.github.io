@@ -1,30 +1,22 @@
 <template>
-  <div >
+  <div>
     <div style="display: flex;">
       <div style="flex: 1;">
         <div style="margin-top: 5px;" @click="routergot('home')">
           <div>
-            <i
-              style="font-size: 25px;color: aqua;"
-              class="el-icon-folder-opened"
-              v-if="this.$route.path=='/home'"
-            ></i>
-            <i style="font-size: 25px;" class="el-icon-folder" v-else></i>
+            <i class="el-icon-folder-opened brightIcon" v-if="this.$route.path == '/home'"></i>
+            <i class="el-icon-folder darkIcon" v-else></i>
           </div>
-          <div style="font-size: 10px;">首页</div>
+          <div class="fontIcon">首页</div>
         </div>
       </div>
       <div style="flex: 1;">
         <div style="margin-top: 5px;" @click="routergot('other')">
           <div>
-            <i
-              style="font-size: 25px;color: aqua;"
-              class="el-icon-s-promotion"
-              v-if="this.$route.path=='/other'"
-            ></i>
-            <i style="font-size: 25px;" class="el-icon-s-promotion" v-else></i>
+            <i class="el-icon-s-promotion brightIcon" v-if="this.$route.path == '/other'"></i>
+            <i class="el-icon-s-promotion darkIcon" v-else></i>
           </div>
-          <div style="font-size: 10px;">其他</div>
+          <div class="fontIcon">其他</div>
         </div>
       </div>
     </div>
@@ -46,4 +38,16 @@ export default {
 </script>
 
 <style scoped>
+.brightIcon {
+  font-size: 25px;
+  color: #019fff;
+}
+
+.darkIcon {
+  font-size: 25px;
+}
+
+.fontIcon {
+  font-size: 10px;
+}
 </style>

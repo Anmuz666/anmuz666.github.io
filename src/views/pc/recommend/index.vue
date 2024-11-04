@@ -7,11 +7,11 @@
     <div class="header">
       <div class="left">
         <ul>
-          <li style=" border-top: 3px solid #fc5531;" @click="goto('/pc')" title="你已经再推荐页了">
-            {{ $t('navbar.recommend') }}</li>
-          <li @click="goto('/picWarehouse')" title="这里是赛博丹炉房">{{ $t('navbar.ImageRepository') }}</li>
-          <li @click="goto('/developmentLogs')" title="开发日志/更新日志"> {{ $t('navbar.DevelopmentLogs') }}</li>
-          <li @click="goto('/test')" title="test" v-if="this.NODE_ENV == 'development'"> test</li>
+          <li style=" border-top: 3px solid #fc5531;" @click="goto('/pc')" title="你已经再推荐页了">{{ $t('NAVBAR.recommend') }}</li>
+          <li @click="goto('/GameLobby')" title="玩玩玩，就知道玩"> {{ $t('NAVBAR.GameLobby') }}</li>
+          <li @click="goto('/picWarehouse')" title="这里是赛博丹炉房">{{ $t('NAVBAR.Gallery') }}</li>
+          <li @click="goto('/developmentLogs')" title="开发日志/更新日志"> {{ $t('NAVBAR.DevelopmentLogs') }}</li>
+          <li @click="goto('/test')" title="test" v-if="this.NODE_ENV == 'development'">test</li>
         </ul>
       </div>
       <div class="center"></div>
@@ -20,9 +20,9 @@
       </div>
     </div>
     <div class="pcBody">
-      <marquee>{{ $t('navbar.STOPDOGBARKING') }}</marquee>
-      <el-button type="primary" plain @click="gotoplay()">去盖楼</el-button>
-      <!-- {{ $t('navbar.ThereIsNothingHere') }} -->
+      <!-- <marquee>{{ $t('SENTENCE.STOPDOGBARKING') }}</marquee> -->
+      <!-- <img src="https://images.weserv.nl/?url=p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d0013c90ec24b67be4d6945a6e27ce4~tplv-k3u1fbpfcp-jj:500:0:0:0:q75.avis" alt="">
+      {{ $t('SENTENCE.ThereIsNothingHere') }} -->
     </div>
   </div>
 </template>
@@ -49,10 +49,6 @@ export default {
         console.log("目标位置与当前位置相同，跳过导航");
       }
     },
-
-    gotoplay(){
-      window.open("builder.html")
-    }
   }
 };
 </script>
@@ -155,6 +151,6 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 99%;
 }
 </style>

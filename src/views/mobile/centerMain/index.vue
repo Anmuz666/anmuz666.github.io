@@ -2,12 +2,10 @@
   <div style="max-width: 1024px;margin: auto;">
     <el-header class="elHeader" style="height: 50px;">
       <div style="height:100%;">
-        <div style="float: left;line-height:45px;">苟创中学</div>
-        <!-- <div style="float: left;line-height:45px;">- -</div> -->
-        <div style="float: right;font-size:10px">移动端,pc端请用电脑打开</div>
+        <marquee>这里是苟创中学移动端,pc端请用电脑打开</marquee>
       </div>
     </el-header>
-     <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee>
+     <!-- <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee> -->
     <el-main>
       <div style="padding:0px;background:#ffffff;padding:0px 15px 0px 15px">
         <template v-for="item in items" class="homeListDiv">
@@ -68,41 +66,6 @@ export default {
   data() {
     return {
       items: [
-        // {
-        //   title:
-        //     "1111111111111111111111111111111111111111111111111111111111111",
-        //   content:
-        //     "1111111111111111111111111111111111111111111111111111111111111",
-        //   createUser: "12312",
-        //   img: "1",
-        //   tag: "1",
-        //   imgurl: [
-        //     {
-        //       url:
-        //         "/homeImg/1727428191656.webp"
-        //     },
-        //     {
-        //       url:
-        //         "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-        //     },
-        //     {
-        //       url:
-        //         "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-        //     },
-        //     {
-        //       url:
-        //         "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-        //     }
-        //   ],
-        //   createTime: "createTime"
-        // },
-        // {
-        //   title:
-        //     "1111111111111111111111111111111111111111111111111111111111111",
-        //   content: "132123",
-        //   createUser: "12312",
-        //   img: "0"
-        // }
       ]
     };
   },
@@ -160,16 +123,9 @@ export default {
   background: rgb(243, 245, 251);
 }
 .elHeader {
-  font-size: 30px;
+  font-size: 20px;
   color: #141e46;
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(224, 243, 255, 1),
-    rgba(193, 231, 255, 1),
-    rgba(161, 218, 255, 1),
-    rgba(130, 206, 255, 1),
-    rgba(99, 194, 255, 1)
-  );
+  background:#f0f4ff,
 }
 ::v-deep {
   .el-card.is-always-shadow,

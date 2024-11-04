@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import centerFooter from "@/views/center/centerFooter/index.vue";
+import centerFooter from "@/views/mobile/centerFooter/index.vue";
 import axios from "axios";
 export default {
   data() {

@@ -1,7 +1,7 @@
 <template>
     <el-dropdown trigger="click" @command="changeLanguage">
         <div>
-            {{ $t('navbar.systemLanguage') }}
+            {{ $t('SYSTEM.Language') }}
         </div>
         <el-dropdown-menu slot="dropdown">
             <el-dropdown-item command="zhcn" :disabled="'zhcn' === $i18n.locale">简体中文</el-dropdown-item>

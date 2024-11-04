@@ -1,8 +1,8 @@
 export default {
-    navbar: {
-        systemLanguage: '日本語',
-        recommend: 'おすすめ',
-        ImageRepository: "イメージリポジトリ",
+    SYSTEM: {
+        Language: '日本語'
+    },
+    DATA: {
         Monday: "月曜日",
         Tuesday: "火曜日",
         Wednesday: "水曜日",
@@ -10,9 +10,15 @@ export default {
         Friday: "金曜日",
         Saturday: "土曜日",
         Sunday: "日曜日",
+    },
+    NAVBAR:{
+        recommend: 'おすすめ',
+        GameLobby: "ゲームロビー",
+        Gallery:'アルバム',
+        DevelopmentLogs: "開発ログ",
+    },
+    SENTENCE: {
         STOPDOGBARKING: "犬はキャンパス内で吠えることを禁じられており、不従順な人はパンホン公園に送られます",
-        DevelopmentLogs:"開発ログ",
-        ThereIsNothingHere:"ここには何もありません",
-
+        ThereIsNothingHere: "ここには何もありません",
     }
 }

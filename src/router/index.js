@@ -1,5 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import NProgress from "nprogress"; // 导入 nprogress模块
+ 
+import "nprogress/nprogress.css"; // 导入样式，否则看不到效果
+ 
+NProgress.configure({ showSpinner: false }); // 显示右上角螺旋加载提示
 Vue.use(VueRouter)
 import {
   getflag
@@ -193,6 +198,9 @@ const router = new VueRouter({
 //全局前置路由守卫————初始化的时候被调用、每次路由切换之前被调用
 router.beforeEach((to, from, next) => {
   // console.log('前置路由守卫', to, from)
+  
+  NProgress.start(); //开启进度条
+
   //判断是否需要鉴权
   if (to.meta.isAuth) {
     //判断当前设备是不是手机
@@ -217,4 +225,10 @@ router.beforeEach((to, from, next) => {
     next()
   }
 })
+
+router.afterEach(() => {
+ 
+  NProgress.done(); //完成进度条
+
+});
 export default router

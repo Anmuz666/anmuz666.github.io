@@ -14,12 +14,6 @@
                 <Lang class="lang" title="点击切换语言"></Lang>
             </div>
         </div>
-        <!-- <div style="width:100%;">
-            <div style="width: calc(100% - 310px); margin: 0px auto;margin-top:10px" class="grid-container">
-                <el-image v-for="item in items" :key="item.id" class="grid-item"
-                    style="display:inline-block;margin-right:6px" :src="item.url" :fit="'cover'"></el-image>
-            </div>
-        </div> -->
         <div class="picBody">
             <Waterfall :list="list" style="background-color: transparent;">
                 <template #item="{ item, url, index }">

@@ -21,8 +21,7 @@
     </div>
     <div class="pcBody">
       <!-- <marquee>{{ $t('SENTENCE.STOPDOGBARKING') }}</marquee> -->
-      <!-- <img src="https://images.weserv.nl/?url=p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d0013c90ec24b67be4d6945a6e27ce4~tplv-k3u1fbpfcp-jj:500:0:0:0:q75.avis" alt="">
-      {{ $t('SENTENCE.ThereIsNothingHere') }} -->
+      <!-- {{ $t('SENTENCE.ThereIsNothingHere') }} -->
     </div>
   </div>
 </template>

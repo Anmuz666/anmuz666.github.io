@@ -1,14 +1,23 @@
 <template>
   <div style="max-width: 1024px;margin: auto;">
-    <el-header class="elHeader" style="height: 50px;">
-      <div style="height:100%;">
-        <marquee>这里是苟创中学移动端,pc端请用电脑打开</marquee>
+    <el-header class="elHeader" style="height: 40px;">
+      <div
+        style="height:100%;font-size:18px; display: flex; justify-content: center; align-items: center;font-family: 'Comfortaa', cursive;">
+        首页
       </div>
     </el-header>
-     <!-- <marquee>校园内禁止狗叫，不听话的送潘宏园区</marquee> -->
+
     <el-main>
-      <div style="padding:0px;background:#ffffff;padding:0px 15px 0px 15px">
-        <template v-for="item in items" class="homeListDiv">
+      <div style="padding:0px;padding:0px 15px 0px 15px">
+        <marquee style="background:rgb(243, 245, 251);">校园内禁止狗叫，不听话的送潘宏园区</marquee>
+        <p style="font-family: 'Comfortaa', cursive;">我家哥哥的出道视频</p>
+        <!-- <video controls style="height:100%;width:100%;background:black"> -->
+        <video controls style="height:100%;width:100%;background:black"
+          src="https://imgur.la/images/2024/11/05/7b7b43e1631bcad4bca2c02bbfdaf134.mp4"
+          poster="https://images.weserv.nl/?url=imgur.la/images/2024/11/05/7b7b43e1631bcad4bca2c02bbfdaf134.th.jpeg">
+          您的浏览器不支持播放
+        </video>
+        <!-- <template v-for="item in items" class="homeListDiv">
           <div
             style="border-bottom:1px solid #ededed;padding:0px;padding:10px 0px 10px 0px;"
             @click="routerGoTo(item)"
@@ -19,11 +28,6 @@
                   style="margin: 0px 0px 4px; text-align: left; font-weight: 500; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
                 >{{ item.title }}</h3>
               </div>
-              <!-- <div>
-              <p
-                style="margin: 0;text-align: left;height:20px;font-size:14px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-bottom:8px"
-              >{{ item.content }}</p>
-              </div>-->
               <div>
                 <p
                   style="margin: 0;word-wrap: break-word;text-align: left;height:20px;font-size:14px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-bottom:8px"
@@ -40,7 +44,6 @@
               <div style="display:flex;justify-content:space-between">
                 <div>
                   <i class="el-icon-download" v-if="item.tag=='localDown'"></i>
-                  <!-- <span style="font-size:12px;margin-right:16px">{{ item.tag }}</span> -->
                 </div>
                 <div>
                   <span
@@ -53,7 +56,7 @@
               </div>
             </div>
           </div>
-        </template>
+        </template> -->
       </div>
     </el-main>
   </div>
@@ -70,15 +73,15 @@ export default {
     };
   },
   mounted() {
-    this.getHomelist();
+    // this.getHomelist();
   },
   methods: {
-    getHomelist() {
-      axios.get("/homeListJson/20240926.json").then(res => {
-        this.items = res.data.data;
-        console.log(res.data.data);
-      });
-    },
+    // getHomelist() {
+    //   axios.get("/homeListJson/20240926.json").then(res => {
+    //     this.items = res.data.data;
+    //     console.log(res.data.data);
+    //   });
+    // },
     routerGoTo(index) {
       let data = [
         {
@@ -122,17 +125,21 @@ export default {
 .homeListDiv:active {
   background: rgb(243, 245, 251);
 }
+
 .elHeader {
-  font-size: 20px;
+  // font-size: 20px;
   color: #141e46;
-  background:#f0f4ff,
+  background: #f0f4ff,
 }
+
 ::v-deep {
+
   .el-card.is-always-shadow,
   .el-card.is-hover-shadow:focus,
   .el-card.is-hover-shadow:hover {
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1);
   }
+
   .el-card.is-always-shadow,
   .el-card.is-hover-shadow:focus,
   .el-card.is-hover-shadow:hover,
@@ -142,9 +149,11 @@ export default {
   .el-notification {
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1);
   }
+
   .el-main {
     padding: 0px;
   }
+
   .el-tag {
     border-radius: 0px;
   }

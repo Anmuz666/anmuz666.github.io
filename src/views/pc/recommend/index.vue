@@ -7,7 +7,8 @@
     <div class="header">
       <div class="left">
         <ul>
-          <li style=" border-top: 3px solid #fc5531;" @click="goto('/pc')" title="你已经再推荐页了">{{ $t('NAVBAR.recommend') }}</li>
+          <li style=" border-top: 3px solid #fc5531;" @click="goto('/pc')" title="你已经再推荐页了">{{ $t('NAVBAR.recommend') }}
+          </li>
           <li @click="goto('/GameLobby')" title="玩玩玩，就知道玩"> {{ $t('NAVBAR.GameLobby') }}</li>
           <li @click="goto('/picWarehouse')" title="这里是赛博丹炉房">{{ $t('NAVBAR.Gallery') }}</li>
           <li @click="goto('/developmentLogs')" title="开发日志/更新日志"> {{ $t('NAVBAR.DevelopmentLogs') }}</li>
@@ -20,6 +21,16 @@
       </div>
     </div>
     <div class="pcBody">
+      <!-- <video
+      controls
+      style="height:100%;width:100%;background:black" 
+      > -->
+      <video controls style="height:100%;width:100%;background:black"
+        src="https://imgur.la/images/2024/11/05/7b7b43e1631bcad4bca2c02bbfdaf134.mp4"
+        poster="https://images.weserv.nl/?url=imgur.la/images/2024/11/05/7b7b43e1631bcad4bca2c02bbfdaf134.th.jpeg">
+        您的浏览器不支持播放
+      </video>
+
       <!-- <marquee>{{ $t('SENTENCE.STOPDOGBARKING') }}</marquee> -->
       <!-- {{ $t('SENTENCE.ThereIsNothingHere') }} -->
     </div>

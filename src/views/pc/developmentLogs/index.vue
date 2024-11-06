@@ -26,9 +26,14 @@
             </div>
             <div class="main">
                 <!--main-->
+                <p>9. 测试1.8<br>&emsp;更新时间：<time>2024-11-06</time><br></p>
+                <ol>
+                    <li>PC推荐页加入了<strong>偶像联系生第一名的出道视频</strong></li>
+                    <li>移动端首页加入了<strong>偶像联系生第一名的出道视频</strong>，临时移除原列表</li>
+                </ol>
                 <p>8. 测试1.7<br>&emsp;更新时间：<time>2024-11-05</time><br></p>
                 <ol>
-                    <li>添加<strong>页面加载进度条</strong></li>
+                    <li>PC添加<strong>页面加载进度条</strong></li>
                 </ol>
                 <p>7. 测试1.6<br>&emsp;更新时间：<time>2024-11-04</time><br></p>
                 <ol>

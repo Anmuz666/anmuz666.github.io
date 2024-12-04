@@ -27,14 +27,15 @@
 </template>
 
 <script>
-import axios from "axios";
+import { CONSOLE_PUBLIC_URL } from "@/api/publicUrl.js"
+import { getPicWareHouseList } from "@/api/gouchuang/picWarehouse/index.js"
+//瀑布流组件
 import { LazyImg, Waterfall } from 'vue-waterfall-plugin'
 import 'vue-waterfall-plugin/dist/style.css'
 export default {
     data() {
         return {
-            list: [
-            ]
+            list: []
         };
     },
     components: { LazyImg, Waterfall }, // 组件列表
@@ -51,12 +52,12 @@ export default {
             }
         },
         getHomelist() {
-            axios.get("/JSON/picWarehouse/20241015.json").then(res => {
+            getPicWareHouseList().then(res => {
+                console.log(res.data.data)
                 this.list = res.data.data.map(item => ({
-                    src: item.url
+                    src: CONSOLE_PUBLIC_URL + item.url
                 }));
-                // this.list = res.data.data;
-            });
+            })
         },
     }
 };
@@ -92,12 +93,10 @@ export default {
     user-select: none;
 
     /* Standard syntax 无法选中改文本 */
-
     .left {
         ul {
             width: auto;
             margin: 0px;
-
         }
 
         li {

@@ -25,11 +25,17 @@
       controls
       style="height:100%;width:100%;background:black" 
       > -->
-      <video controls style="height:100%;width:100%;background:black"
+      <!-- <video controls style="height:100%;width:100%;background:black"
         src="https://imgur.la/images/2024/11/05/7b7b43e1631bcad4bca2c02bbfdaf134.mp4"
         poster="https://images.weserv.nl/?url=imgur.la/images/2024/11/05/7b7b43e1631bcad4bca2c02bbfdaf134.th.jpeg">
         您的浏览器不支持播放
-      </video>
+      </video> -->
+
+           <!-- <video controls style="height:100%;width:100%;background:black"
+        src="https://imgur.la/images/2024/11/05/7b7b43e1631bcad4bca2c02bbfdaf134.mp4">
+        您的浏览器不支持播放
+      </video> -->
+      
 
       <!-- <marquee>{{ $t('SENTENCE.STOPDOGBARKING') }}</marquee> -->
       <!-- {{ $t('SENTENCE.ThereIsNothingHere') }} -->

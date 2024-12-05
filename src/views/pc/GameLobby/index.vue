@@ -16,13 +16,9 @@
         </div>
         <div class="pcBody">
             <div class="grid-container">
-                <div v-for="(item, index) in GAMELIST" :key="index" class="grid-item"  @click="gotoplay(item.htmlUrl)">
-                    <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl &&item.side=='juejin'"
+                <div v-for="(item, index) in gameList" :key="index" class="grid-item"  @click="goToPlay(item.htmlUrl)">
+                    <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl"
                     :src="cleanedImgUrl(item.imgUrl)">
-                    <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl &&item.side=='imgur'"
-                    :src="cleanedImgUrl(item.imgUrl)">
-                    <img alt="nothing" v-if="typeof item === 'object' && item.imgUrl &&item.side=='jq22'"
-                    :src="item.imgUrl">
                     <p v-if="typeof item === 'object'">{{ item.gameName }}</p>
                 </div>
             </div>
@@ -36,19 +32,21 @@
 </template>
 
 <script>
+import { CONSOLE_PUBLIC_URL } from "@/api/publicUrl.js"
+import { getGameLobbyList } from "@/api/gouchuang/gameLobby/index.js"
 import axios from "axios";
 export default {
     data() {
         return {
             NODE_ENV: "",
-            GAMELIST: []
+            gameList: []
         };
     },
     components: {},
     created() {
         //获取开发环境
         this.NODE_ENV = process.env.NODE_ENV
-        this.getGAMELIST()
+        this.getGameList()
     },
     mounted() { },
     methods: {
@@ -59,17 +57,16 @@ export default {
                 console.log("目标位置与当前位置相同，跳过导航");
             }
         },
-        getGAMELIST() {
-            axios.get("/JSON/GameLobby/20241104.json").then(res => {
-                this.GAMELIST = res.data.data;
-            });
+        getGameList() {
+          getGameLobbyList().then(res=>{
+            this.gameList = res.data.data;
+          })
         },
         cleanedImgUrl(index){
-            let url='https://images.weserv.nl/?url=' + index.replace(/^https?:\/\//, '');
-            return url
+            return CONSOLE_PUBLIC_URL + index
         },
-        gotoplay(index) {
-            window.open("GAME/" + index + "/index.html")
+        goToPlay(index) {
+            window.open(CONSOLE_PUBLIC_URL+"/GAME/" + index + "/index.html")
         }
     }
 };

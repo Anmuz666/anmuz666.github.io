@@ -126,6 +126,17 @@ const routes = [
       title: 'test'
     }
   },
+  {
+    //pc测试页
+    path: '/test2',
+    name: 'test2',
+    component: () => import('@/views/pc/test2/index.vue'),
+    meta: {
+      isAuth: true,
+      permissions: 'pc',
+      title: 'test2'
+    }
+  },
   //<-pc页面
   {
     //内部下载

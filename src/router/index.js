@@ -132,7 +132,7 @@ const routes = [
     name: 'test2',
     component: () => import('@/views/pc/test2/index.vue'),
     meta: {
-      isAuth: true,
+      // isAuth: true,
       permissions: 'pc',
       title: 'test2'
     }

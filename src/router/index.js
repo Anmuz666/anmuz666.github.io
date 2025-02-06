@@ -221,6 +221,7 @@ router.beforeEach((to, from, next) => {
         next()
       } else {
         alert('请在PC端访问该页面')
+        next('/'); // 跳转到默认页
       }
       //设备不是手机
     } else {
@@ -229,6 +230,7 @@ router.beforeEach((to, from, next) => {
         next()
       } else {
         alert('请在移动端访问该页面')
+        next('/'); // 跳转到默认页
       }
     }
     //不需要直接放行

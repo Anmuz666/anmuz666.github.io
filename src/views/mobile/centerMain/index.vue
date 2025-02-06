@@ -8,10 +8,14 @@
     </el-header>
 
     <el-main>
-      <div style="padding: 0px; padding: 0px 15px 0px 15px; display: flex; align-items: center; height: 80vh;font-family: 'Comfortaa', cursive;">
-        <div>正在清理屎山代码ing...</div>
-      </div>
-    </el-main>
+      <el-main>
+  <div style="padding: 0px; padding: 0px 15px 0px 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; font-family: 'Comfortaa', cursive;">
+    <div>欢迎来到苟创中学</div>
+    <div>此页面由暗木z提供技术支持</div>
+    <div>更新时间:2025/2/6 16:40</div>
+  </div>
+</el-main>
+</el-main>
   </div>
 </template>
 
